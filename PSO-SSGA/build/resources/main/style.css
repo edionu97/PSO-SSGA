@@ -1,0 +1,42 @@
+#buttons{
+    -fx-border-color: whitesmoke;
+    -fx-border-width: 1px;
+    -fx-text-fill: whitesmoke;
+}
+
+
+#anchorSSGA{
+    -fx-border-color: whitesmoke;
+    -fx-border-width: 1px;
+}
+
+#mainWindow{
+    -fx-background-color: #263347;
+}
+
+.lab,.text-field{
+    -fx-text-fill: whitesmoke;
+    -fx-prompt-text-fill: whitesmoke;
+}
+
+.axis {
+    -fx-tick-label-fill: whitesmoke;
+}
+
+.combo-box{
+    -fx-text-fill: whitesmoke;
+}
+
+
+.combo-box .cell {
+    -fx-text-fill: white;
+}
+
+.combo-box .list-cell{
+    -fx-background-color: #263347;
+}
+
+.combo-box .list-cell:hover{
+    -fx-background-color: lightgray;
+    -fx-text-fill: black;
+}

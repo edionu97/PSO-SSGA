@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.WindowController">
+   <children>
+      <AnchorPane id="mainWindow" prefHeight="526.0" prefWidth="809.0">
+         <children>
+            <LineChart fx:id="lineChart" layoutX="21.0" layoutY="27.0" prefHeight="363.0" prefWidth="768.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <JFXButton id="buttons" fx:id="buttonSearch" layoutX="686.0" layoutY="479.0" prefHeight="40.0" prefWidth="101.0" text="Search" AnchorPane.leftAnchor="687.0" AnchorPane.rightAnchor="21.0" />
+            <AnchorPane id="anchorSSGA" layoutX="29.0" layoutY="398.0" prefHeight="124.0" prefWidth="200.0" AnchorPane.rightAnchor="590.0" AnchorPane.topAnchor="394.0">
+               <children>
+                  <JFXComboBox fx:id="comboBox" layoutX="117.0" layoutY="4.0" unFocusColor="#eeeeee" AnchorPane.rightAnchor="27.0" />
+                  <Label layoutX="14.0" layoutY="5.0" prefHeight="25.0" prefWidth="68.0" styleClass="lab" text="Method:" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="12.0" />
+                  <Label layoutX="13.0" layoutY="40.0" prefHeight="25.0" prefWidth="80.0" styleClass="lab" text="Pop size:" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="44.0" />
+                  <JFXTextField fx:id="textFieldPop" alignment="CENTER" layoutX="93.0" layoutY="35.0" prefHeight="25.0" prefWidth="56.0" unFocusColor="#e4e4e4" AnchorPane.rightAnchor="51.0" />
+                  <JFXTextField fx:id="textFieldIt" alignment="CENTER" layoutX="109.0" layoutY="70.0" prefHeight="25.0" prefWidth="56.0" unFocusColor="WHITE" AnchorPane.rightAnchor="35.0" />
+                  <Label layoutY="75.0" prefHeight="25.0" prefWidth="101.0" styleClass="lab" text="Repetitions:" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="78.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane id="anchorSSGA" fx:id="anchorPaneSSGA" layoutX="238.0" layoutY="394.0" prefHeight="109.0" prefWidth="200.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="371.0" AnchorPane.topAnchor="394.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="60.0" layoutY="1.0" prefHeight="17.0" prefWidth="80.0" styleClass="lab" text="SSGA" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label layoutX="14.0" layoutY="22.0" styleClass="lab" text="SplitPointNr:" />
+                  <Label layoutX="16.0" layoutY="51.0" styleClass="lab" text="SelectionNr:" />
+                  <Label layoutX="13.0" layoutY="81.0" styleClass="lab" text="MutationProb:" />
+                  <JFXTextField fx:id="textFieldSplit" alignment="CENTER" layoutX="91.0" layoutY="14.0" prefHeight="25.0" prefWidth="101.0" unFocusColor="WHITE" />
+                  <JFXTextField fx:id="textFieldSel" alignment="CENTER" layoutX="91.0" layoutY="41.0" prefHeight="25.0" prefWidth="101.0" unFocusColor="#fcfcfc" />
+                  <JFXTextField fx:id="textFieldProb" alignment="CENTER" layoutX="93.0" layoutY="68.0" prefHeight="25.0" prefWidth="101.0" unFocusColor="#f5f5f5" AnchorPane.topAnchor="68.0" />
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="104.0" prefHeight="17.0" prefWidth="76.0" styleClass="lab" text="Chrom dim:" />
+                  <JFXTextField fx:id="textFieldChromo" alignment="CENTER" layoutX="97.0" layoutY="93.0" prefHeight="25.0" prefWidth="101.0" unFocusColor="WHITE" />
+               </children>
+            </AnchorPane>
+            <AnchorPane id="anchorSSGA" fx:id="anchorPanePSO" layoutX="458.0" layoutY="381.0" prefHeight="139.0" prefWidth="200.0" AnchorPane.bottomAnchor="8.0" AnchorPane.topAnchor="394.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="86.0" layoutY="6.0" prefHeight="17.0" prefWidth="110.0" styleClass="lab" text="PSO" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Label layoutX="17.0" layoutY="26.0" styleClass="lab" text="Initial velocity:" />
+                  <Label layoutX="9.0" layoutY="49.0" styleClass="lab" text="Cognitive fact(c1):" />
+                  <Label layoutX="20.0" layoutY="77.0" styleClass="lab" text="Inertial fact(c2):" />
+                  <Label layoutX="14.0" layoutY="103.0" styleClass="lab" text="Inertial factor(w):" />
+                  <JFXTextField fx:id="textFieldVeloc" alignment="CENTER" layoutX="103.0" layoutY="13.0" prefHeight="25.0" prefWidth="89.0" unFocusColor="#f5f5f5" />
+                  <JFXTextField fx:id="textFieldC1" alignment="CENTER" layoutX="106.0" layoutY="39.0" prefHeight="25.0" prefWidth="89.0" unFocusColor="#f5f5f5" />
+                  <JFXTextField fx:id="textFieldC2" alignment="CENTER" layoutX="106.0" layoutY="66.0" prefHeight="25.0" prefWidth="89.0" unFocusColor="#f8f8f8" />
+                  <JFXTextField fx:id="textFieldW" alignment="CENTER" layoutX="106.0" layoutY="92.0" prefHeight="25.0" prefWidth="89.0" unFocusColor="#f8f8f8" />
+               </children>
+            </AnchorPane>
+            <JFXButton id="buttons" fx:id="buttonLocation" layoutX="687.0" layoutY="436.0" prefHeight="40.0" prefWidth="101.0" text="Browse..." AnchorPane.leftAnchor="687.0" AnchorPane.rightAnchor="21.0" />
+            <JFXTextField fx:id="textFieldScale" labelFloat="true" layoutX="704.0" layoutY="366.0" prefHeight="25.0" prefWidth="101.0" promptText="Enter scale" text="50" unFocusColor="WHITE" />
+            <Label fx:id="resultLabel" alignment="CENTER" layoutX="238.0" layoutY="6.0" prefHeight="25.0" prefWidth="809.0" styleClass="lab" text="Label" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+               <font>
+                  <Font name="Arial Italic" size="20.0" />
+               </font>
+            </Label>
+            <JFXCheckBox id="checkbox" fx:id="checkBox2D" layoutX="767.0" layoutY="402.0" prefHeight="18.0" prefWidth="40.0" text="2D" textFill="WHITE" AnchorPane.topAnchor="410.0" />
+            <JFXCheckBox fx:id="checkBox1D" layoutX="672.0" layoutY="402.0" text="1D" textFill="WHITE" AnchorPane.rightAnchor="97.0" AnchorPane.topAnchor="410.0" />
+            <JFXCheckBox fx:id="checkBoxFct" layoutX="717.0" layoutY="410.0" prefHeight="18.0" prefWidth="48.0" text="FCT" textFill="#fffdfd" AnchorPane.topAnchor="410.0" />
+            <JFXProgressBar fx:id="progressBar" layoutX="259.0" layoutY="32.0" prefHeight="6.0" prefWidth="256.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
